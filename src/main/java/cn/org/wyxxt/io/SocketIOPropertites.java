@@ -62,7 +62,7 @@ public class SocketIOPropertites {
         try {
             while (true) {
 
-                // System.in.read();  //分水岭：
+//                 System.in.read();  //分水岭：
 
                 final Socket client = server.accept();  //阻塞的，没有 -1  一直卡着不动  accept(4,
                 System.out.println("client port: " + client.getPort());

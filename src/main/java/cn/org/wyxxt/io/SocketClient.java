@@ -18,7 +18,8 @@ public class SocketClient {
             Socket client = new Socket("127.0.0.1",9090);
 
             client.setSendBufferSize(20);
-            client.setTcpNoDelay(true);
+            client.setTcpNoDelay(false);
+//            client.setOOBInline(false);
             OutputStream out = client.getOutputStream();
 
             InputStream in = System.in;
