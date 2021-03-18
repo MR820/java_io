@@ -30,21 +30,20 @@ public class OSFileIO {
 
     public static void main(String[] args) throws Exception {
 
-        testBasicFileIO();
-//        switch ( args[0]) {
-//            case "0" :
-//                testBasicFileIO();
-//                break;
-//            case "1":
-//                testBufferedFileIO();
-//                break;
-//            case "2" :
-//                testRandomAccessFileWrite();
-//            case "3":
-////                whatByteBuffer();
-//            default:
-//
-//        }
+        switch ( args[0]) {
+            case "0" :
+                testBasicFileIO();
+                break;
+            case "1":
+                testBufferedFileIO();
+                break;
+            case "2" :
+                testRandomAccessFileWrite();
+            case "3":
+//                whatByteBuffer();
+            default:
+
+        }
     }
 
 
