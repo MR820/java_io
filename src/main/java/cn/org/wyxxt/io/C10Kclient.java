@@ -19,7 +19,7 @@ public class C10Kclient {
 
         //端口号的问题：65535
         //  windows
-        for (int i = 10000; i < 10001; i++) {
+        for (int i = 10000; i < 65000; i++) {
             try {
                 SocketChannel client1 = SocketChannel.open();
 
