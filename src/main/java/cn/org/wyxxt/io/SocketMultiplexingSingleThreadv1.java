@@ -11,13 +11,11 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
 public class SocketMultiplexingSingleThreadv1 {
 
-    //马老师的坦克 一 二期
     private ServerSocketChannel server = null;
     private Selector selector = null;   //linux 多路复用器（select poll    epoll kqueue） nginx  event{}
     int port = 9090;
@@ -25,7 +23,7 @@ public class SocketMultiplexingSingleThreadv1 {
     public void initServer() {
         try {
             server = ServerSocketChannel.open();
-            server.configureBlocking(false);
+            server.configureBlocking(false); // 非阻塞
             server.bind(new InetSocketAddress(port));
 
 
@@ -109,7 +107,7 @@ public class SocketMultiplexingSingleThreadv1 {
 
             ByteBuffer buffer = ByteBuffer.allocate(8192);  //前边讲过了
 
-            // 0.0  我类个去
+            // 0.0  我了个去
             //你看，调用了register
         /*
         select，poll：jvm里开辟一个数组 fd7 放进去
