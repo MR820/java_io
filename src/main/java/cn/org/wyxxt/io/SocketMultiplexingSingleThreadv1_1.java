@@ -123,7 +123,7 @@ public class SocketMultiplexingSingleThreadv1_1 {
                     read = client.read(buffer);
                     if (read > 0) {
                         client.register(key.selector(),SelectionKey.OP_WRITE,buffer);
-                        //关心  OP_WRITE 其实就是关系send-queue是不是有空间
+                        //关心  OP_WRITE 其实就是关心send-queue是不是有空间
                     } else if (read == 0) {
                         break;
                     } else {
